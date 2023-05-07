@@ -92,7 +92,7 @@ public class RoleDao implements RoleInterface {
 
     @Override
     public void createRole(Role role) {
-        if (role.getRole_id() != 0) {
+        if (role.getRoleId() != 0) {
             throw new IllegalArgumentException("ID must not be specified!");
         }
         try {

@@ -1,14 +1,14 @@
 package org.stoliarchuk.entities;
 
 public class Status {
-    private long status_id;
+    private long statusId;
     private String name;
 
-    public long getStatus_id() {
-        return this.status_id;
+    public long getStatusId() {
+        return this.statusId;
     }
     public void setStatus_id(long value) {
-        this.status_id = value;
+        this.statusId = value;
     }
     public String getName() {
         return this.name;
@@ -18,11 +18,11 @@ public class Status {
     }
 
     public void print() {
-        System.out.println("{ status_id: " + this.status_id + ", name: " + this.name + " }");
+        System.out.println("{ status_id: " + this.statusId + ", name: " + this.name + " }");
     }
 
     public Status(long Status_id, String Name) {
-        this.status_id = Status_id;
+        this.statusId = Status_id;
         this.name = Name;
     }
 

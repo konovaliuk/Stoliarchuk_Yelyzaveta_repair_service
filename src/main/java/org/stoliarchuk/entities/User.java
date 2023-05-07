@@ -7,16 +7,16 @@ public class User {
     private String username;
     private String password;
 
-    public long getUser_id() {
+    public long getUserId() {
         return this.user_id;
     }
-    public void setUser_id(long value) {
+    public void setUserId(long value) {
         this.user_id = value;
     }
-    public long getRole_id() {
+    public long getRoleId() {
         return this.role_id;
     }
-    public void setRole_id(long value) {
+    public void setRoleId(long value) {
         this.role_id = value;
     }
     public String getEmail() {

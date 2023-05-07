@@ -3,128 +3,128 @@ package org.stoliarchuk.entities;
 import java.sql.Date;
 
 public class Request {
-    private long request_id;
-    private long user_id;
-    private long status_id;
-    private String request_description;
-    private String product_name;
-    private String product_model;
-    private Date created_at;
-    private int repair_cost;
-    private String declination_reason;
+    private long requestId;
+    private long userId;
+    private long statusId;
+    private String requestDescription;
+    private String productName;
+    private String productModel;
+    private Date createdAt;
+    private int repairCost;
+    private String declinationReason;
 
-    public long getRequest_id() {
-        return this.request_id;
+    public long getRequestId() {
+        return this.requestId;
     }
-    public void setRequest_id(long value) {
-        this.request_id = value;
+    public void setRequestId(long value) {
+        this.requestId = value;
     }
-    public long getUser_id() {
-        return this.user_id;
+    public long getUserId() {
+        return this.userId;
     }
-    public void setUser_id(long value) {
-        this.user_id = value;
+    public void setUserId(long value) {
+        this.userId = value;
     }
-    public long getStatus_id() {
-        return this.status_id;
+    public long getStatusId() {
+        return this.statusId;
     }
-    public void setStatus_id(long value) {
-        this.status_id = value;
+    public void setStatusId(long value) {
+        this.statusId = value;
     }
-    public String getRequest_description() {
-        return this.request_description;
+    public String getRequestDescription() {
+        return this.requestDescription;
     }
-    public void setRequest_description(String value) {
-        this.request_description = value;
+    public void setRequestDescription(String value) {
+        this.requestDescription = value;
     }
-    public String getProduct_name() {
-        return this.product_name;
+    public String getProductName() {
+        return this.productName;
     }
-    public void setProduct_name(String value) {
-        this.product_name = value;
+    public void setProductName(String value) {
+        this.productName = value;
     }
-    public String getProduct_model() {
-        return this.product_model;
+    public String getProductModel() {
+        return this.productModel;
     }
-    public void setProduct_model(String value) {
-        this.product_model = value;
+    public void setProductModel(String value) {
+        this.productModel = value;
     }
-    public Date getCreated_at() {
-        return this.created_at;
+    public Date getCreatedAt() {
+        return this.createdAt;
     }
-    public void setCreated_at(Date value) {
-        this.created_at = value;
+    public void setCreatedAt(Date value) {
+        this.createdAt = value;
     }
-    public int getRepair_cost() {
-        return this.repair_cost;
+    public int getRepairCost() {
+        return this.repairCost;
     }
-    public void setRepair_cost(int value) {
-        this.repair_cost = value;
+    public void setRepairCost(int value) {
+        this.repairCost = value;
     }
-    public void setDeclination_reason(String value) {
-        this.declination_reason = value;
+    public void setDeclinationReason(String value) {
+        this.declinationReason = value;
     }
-    public String getDeclination_reason() {
-        return this.declination_reason;
+    public String getDeclinationReason() {
+        return this.declinationReason;
     }
 
     public void print() {
-        System.out.println("{ request_id: " + this.request_id + ", user_id: " + this.user_id + ", status_id: " + this.status_id + ", request_description: " + this.request_description + ", product_name: " + this.product_name + ", product_model:" + this.product_model + ", created_at: " + this.created_at + ", repair_cost: " + this.repair_cost + ", declination_reason: " +  this.declination_reason + " }");
+        System.out.println("{ request_id: " + this.requestId + ", user_id: " + this.userId + ", status_id: " + this.statusId + ", request_description: " + this.requestDescription + ", product_name: " + this.productName + ", product_model:" + this.productModel + ", created_at: " + this.createdAt + ", repair_cost: " + this.repairCost + ", declination_reason: " +  this.declinationReason + " }");
     }
 
-    public Request(long Request_id, long User_id, long Status_id, String Request_description, String Product_name, String Product_model, Date Created_at, int Repair_cost, String Declination_reason) {
-        this.request_id = Request_id;
-        this.user_id = User_id;
-        this.status_id = Status_id;
-        this.request_description = Request_description;
-        this.product_name = Product_name;
-        this.product_model = Product_model;
-        this.created_at = Created_at;
-        this.repair_cost = Repair_cost;
-        this.declination_reason = Declination_reason;
+    public Request(long RequestId, long UserId, long StatusId, String RequestDescription, String ProductName, String ProductModel, Date CreatedAt, int RepairCost, String DeclinationReason) {
+        this.requestId = RequestId;
+        this.userId = UserId;
+        this.statusId = StatusId;
+        this.requestDescription = RequestDescription;
+        this.productName = ProductName;
+        this.productModel = ProductModel;
+        this.createdAt = CreatedAt;
+        this.repairCost = RepairCost;
+        this.declinationReason = DeclinationReason;
     }
 
-    public Request(long User_id, long Status_id, String Request_description, String Product_name, String Product_model, int Repair_cost, String Declination_reason) {
-        this.user_id = User_id;
-        this.status_id = Status_id;
-        this.request_description = Request_description;
-        this.product_name = Product_name;
-        this.product_model = Product_model;
-        this.repair_cost = Repair_cost;
-        this.declination_reason = Declination_reason;
+    public Request(long UserId, long StatusId, String RequestDescription, String ProductName, String ProductModel, int RepairCost, String Declination_reason) {
+        this.userId = UserId;
+        this.statusId = StatusId;
+        this.requestDescription = RequestDescription;
+        this.productName = ProductName;
+        this.productModel = ProductModel;
+        this.repairCost = RepairCost;
+        this.declinationReason = Declination_reason;
     }
 
-    public Request(long User_id, long Status_id, String Request_description, String Product_name, String Product_model, int Repair_cost) {
-        this.user_id = User_id;
-        this.status_id = Status_id;
-        this.request_description = Request_description;
-        this.product_name = Product_name;
-        this.product_model = Product_model;
-        this.repair_cost = Repair_cost;
+    public Request(long UserId, long StatusId, String RequestDescription, String ProductName, String ProductModel, int RepairCost) {
+        this.userId = UserId;
+        this.statusId = StatusId;
+        this.requestDescription = RequestDescription;
+        this.productName = ProductName;
+        this.productModel = ProductModel;
+        this.repairCost = RepairCost;
     }
 
-    public Request(long User_id, long Status_id, String Request_description, String Product_name, String Product_model, String Declination_reason) {
-        this.user_id = User_id;
-        this.status_id = Status_id;
-        this.request_description = Request_description;
-        this.product_name = Product_name;
-        this.product_model = Product_model;
-        this.declination_reason = Declination_reason;
+    public Request(long UserId, long StatusId, String RequestDescription, String ProductName, String ProductModel, String DeclinationReason) {
+        this.userId = UserId;
+        this.statusId = StatusId;
+        this.requestDescription = RequestDescription;
+        this.productName = ProductName;
+        this.productModel = ProductModel;
+        this.declinationReason = DeclinationReason;
     }
 
-    public Request(long User_id, long Status_id, String Request_description, String Product_name, String Product_model) {
-        this.user_id = User_id;
-        this.status_id = Status_id;
-        this.request_description = Request_description;
-        this.product_name = Product_name;
-        this.product_model = Product_model;
+    public Request(long UserId, long StatusId, String RequestDescription, String ProductName, String ProductModel) {
+        this.userId = UserId;
+        this.statusId = StatusId;
+        this.requestDescription = RequestDescription;
+        this.productName = ProductName;
+        this.productModel = ProductModel;
     }
 
-    public Request(long User_id, String Request_description, String Product_name, String Product_model) {
-        this.user_id = User_id;
-        this.request_description = Request_description;
-        this.product_name = Product_name;
-        this.product_model = Product_model;
+    public Request(long UserId, String RequestDescription, String ProductName, String ProductModel) {
+        this.userId = UserId;
+        this.requestDescription = RequestDescription;
+        this.productName = ProductName;
+        this.productModel = ProductModel;
     }
 
     public Request() {

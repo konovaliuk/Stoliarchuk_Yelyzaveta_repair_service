@@ -98,14 +98,14 @@ public class FeedbackDao implements FeedbackInterface {
 
     @Override
     public void createFeedback(Feedback feedback) {
-        if (feedback.getFeedback_id() != 0) {
+        if (feedback.getFeedbackId() != 0) {
             throw new IllegalArgumentException("ID must not be specified!");
         }
         try {
             PreparedStatement stmt = connection.prepareStatement(SQL_CREATE_FEEDBACK);
             stmt.setInt(1, feedback.getRating());
             stmt.setString(2, feedback.getFeedback_description());
-            stmt.setLong(3, feedback.getRequest_id());
+            stmt.setLong(3, feedback.getRequestId());
             stmt.executeUpdate();
             try {
                 stmt.close();

@@ -3,29 +3,29 @@ package org.stoliarchuk.entities;
 import java.sql.Date;
 
 public class Feedback {
-    private long feedback_id;
-    private long request_id;
-    private Date created_at;
+    private long feedbackId;
+    private long requestId;
+    private Date createdAt;
     private int rating;
-    private String feedback_description;
+    private String feedbackDescription;
 
-    public long getFeedback_id() {
-        return this.feedback_id;
+    public long getFeedbackId() {
+        return this.feedbackId;
     }
-    public void setFeedback_id(long value) {
-        this.feedback_id = value;
+    public void setFeedbackId(long value) {
+        this.feedbackId = value;
     }
-    public long getRequest_id() {
-        return this.request_id;
+    public long getRequestId() {
+        return this.requestId;
     }
-    public void setRequest_id(long value) {
-        this.request_id = value;
+    public void setRequestId(long value) {
+        this.requestId = value;
     }
-    public Date getCreated_at() {
-        return this.created_at;
+    public Date getCreatedAt() {
+        return this.createdAt;
     }
-    public void setCreated_at(Date value) {
-        this.created_at = value;
+    public void setCreatedAt(Date value) {
+        this.createdAt = value;
     }
     public int getRating() {
         return this.rating;
@@ -33,29 +33,29 @@ public class Feedback {
     public void setRating(int value) {
         this.rating = value;
     }
-    public void setFeedback_description(String value) {
-        this.feedback_description = value;
+    public void setFeedbackDescription(String value) {
+        this.feedbackDescription = value;
     }
     public String getFeedback_description() {
-        return this.feedback_description;
+        return this.feedbackDescription;
     }
 
     public void print() {
-        System.out.println("{ feedback_id: " + this.feedback_id + ", request_id: " + this.request_id + ", created_at: " + this.created_at + ", rating: " + this.rating + ", feedback_description: " + this.feedback_description + " }");
+        System.out.println("{ feedback_id: " + this.feedbackId + ", request_id: " + this.requestId + ", created_at: " + this.createdAt + ", rating: " + this.rating + ", feedback_description: " + this.feedbackDescription + " }");
     }
 
-    public Feedback(long Feedback_id, long Request_id, Date Created_at, int Rating, String Feedback_description) {
-        this.feedback_id = Feedback_id;
-        this.request_id = Request_id;
-        this.created_at = Created_at;
+    public Feedback(long FeedbackId, long RequestId, Date CreatedAt, int Rating, String FeedbackDescription) {
+        this.feedbackId = FeedbackId;
+        this.requestId = RequestId;
+        this.createdAt = CreatedAt;
         this.rating = Rating;
-        this.feedback_description = Feedback_description;
+        this.feedbackDescription = FeedbackDescription;
     }
 
-    public Feedback(long Request_id, int Rating, String Feedback_description) {
-        this.request_id = Request_id;
+    public Feedback(long RequestId, int Rating, String FeedbackDescription) {
+        this.requestId = RequestId;
         this.rating = Rating;
-        this.feedback_description = Feedback_description;
+        this.feedbackDescription = FeedbackDescription;
     }
 
     public Feedback() {

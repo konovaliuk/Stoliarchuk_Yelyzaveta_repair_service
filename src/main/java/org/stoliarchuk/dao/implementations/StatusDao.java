@@ -92,7 +92,7 @@ public class StatusDao implements StatusInterface {
 
     @Override
     public void createStatus(Status status) {
-        if (status.getStatus_id() != 0) {
+        if (status.getStatusId() != 0) {
             throw new IllegalArgumentException("ID must not be specified!");
         }
         try {

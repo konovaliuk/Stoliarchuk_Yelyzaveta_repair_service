@@ -1,14 +1,14 @@
 package org.stoliarchuk.entities;
 
 public class Role {
-    private long role_id;
+    private long roleId;
     private String name;
 
-    public long getRole_id() {
-        return this.role_id;
+    public long getRoleId() {
+        return this.roleId;
     }
-    public void setRole_id(long value) {
-        this.role_id = value;
+    public void setRoleId(long value) {
+        this.roleId = value;
     }
     public String getName() {
         return this.name;
@@ -18,11 +18,11 @@ public class Role {
     }
 
     public void print() {
-        System.out.println("{ role_id: " + this.role_id + ", name: " + this.name + " }");
+        System.out.println("{ role_id: " + this.roleId + ", name: " + this.name + " }");
     }
 
-    public Role(long Role_id, String Name) {
-        this.role_id = Role_id;
+    public Role(long RoleId, String Name) {
+        this.roleId = RoleId;
         this.name = Name;
     }
 

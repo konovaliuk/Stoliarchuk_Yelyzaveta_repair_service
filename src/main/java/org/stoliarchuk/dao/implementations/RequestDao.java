@@ -129,15 +129,15 @@ public class RequestDao implements RequestInterface {
 
     @Override
     public void createRequest(Request request) {
-        if (request.getRequest_id() != 0) {
+        if (request.getRequestId() != 0) {
             throw new IllegalArgumentException("ID must not be specified!");
         }
         try {
             PreparedStatement stmt = connection.prepareStatement(SQL_CREATE_REQUEST);
-            stmt.setLong(1, request.getUser_id());
-            stmt.setString(2, request.getRequest_description());
-            stmt.setString(3, request.getProduct_name());
-            stmt.setString(4, request.getProduct_model());
+            stmt.setLong(1, request.getUserId());
+            stmt.setString(2, request.getRequestDescription());
+            stmt.setString(3, request.getProductName());
+            stmt.setString(4, request.getProductModel());
             stmt.executeUpdate();
             try {
                 stmt.close();
@@ -153,12 +153,12 @@ public class RequestDao implements RequestInterface {
     public void updateRequestById(long request_id, Request request) {
         try {
             PreparedStatement stmt = connection.prepareStatement(SQL_UPDATE_REQUEST_BY_ID);
-            stmt.setLong(1, request.getStatus_id());
-            stmt.setString(2, request.getRequest_description());
-            stmt.setString(3, request.getProduct_name());
-            stmt.setString(4, request.getProduct_model());
-            stmt.setInt(5, request.getRepair_cost());
-            stmt.setString(6, request.getDeclination_reason());
+            stmt.setLong(1, request.getStatusId());
+            stmt.setString(2, request.getRequestDescription());
+            stmt.setString(3, request.getProductName());
+            stmt.setString(4, request.getProductModel());
+            stmt.setInt(5, request.getRepairCost());
+            stmt.setString(6, request.getDeclinationReason());
             stmt.setLong(7, request_id);
             stmt.executeUpdate();
             try {

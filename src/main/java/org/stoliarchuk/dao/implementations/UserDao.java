@@ -117,25 +117,32 @@ public class UserDao implements UserInterface {
     }
 
     @Override
-    public void createUser(User user) {
-        if (user.getUser_id() != 0) {
+    public User createUser(User user) {
+        if (user.getUserId() != 0) {
             throw new IllegalArgumentException("ID must not be specified!");
         }
         try {
-            PreparedStatement stmt = connection.prepareStatement(SQL_CREATE_USER);
+            PreparedStatement stmt = connection.prepareStatement(SQL_CREATE_USER, Statement.RETURN_GENERATED_KEYS);
             stmt.setString(1, user.getEmail());
             stmt.setString(2, user.getUsername());
             stmt.setString(3, user.getPassword());
-            stmt.setLong(4, user.getRole_id());
+            stmt.setLong(4, user.getRoleId());
             stmt.executeUpdate();
+            try (ResultSet rs = stmt.getGeneratedKeys()) {
+                if (rs.next()) {
+                    user.setUserId(rs.getLong(1));
+                }
+            }
             try {
                 stmt.close();
+                return user;
             } catch (RuntimeException e) {
                 System.out.println(e);
             }
         } catch(SQLException e) {
             e.printStackTrace();
         }
+        return null;
     }
 
     @Override
@@ -145,7 +152,7 @@ public class UserDao implements UserInterface {
             stmt.setString(1, user.getEmail());
             stmt.setString(2, user.getUsername());
             stmt.setString(3, user.getPassword());
-            stmt.setLong(4, user.getRole_id());
+            stmt.setLong(4, user.getRoleId());
             stmt.setLong(5, user_id);
             stmt.executeUpdate();
             try {
