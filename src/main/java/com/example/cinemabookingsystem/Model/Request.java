@@ -1,10 +1,9 @@
-package entities;
+package com.example.cinemabookingsystem.Model;
 
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-
-import jakarta.persistence.*;
 
 import java.time.LocalDateTime;
 
@@ -17,7 +16,7 @@ public class Request {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "request_id")
-    private long requestId;
+    private Long id;
 
     @ManyToOne
     @JoinColumn(name = "user_id")
@@ -40,7 +39,7 @@ public class Request {
     private LocalDateTime createdAt;
 
     @Column(name = "repair_cost")
-    private int repairCost;
+    private Integer repairCost;
 
     @Column(name = "declination_reason")
     private String declinationReason;

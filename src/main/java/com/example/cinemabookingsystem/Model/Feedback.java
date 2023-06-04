@@ -1,10 +1,9 @@
-package entities;
+package com.example.cinemabookingsystem.Model;
 
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-
-import jakarta.persistence.*;
 
 import java.time.LocalDateTime;
 
@@ -17,7 +16,7 @@ public class Feedback {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "feedback_id")
-    private long feedbackId;
+    private long id;
 
     @ManyToOne
     @JoinColumn(name = "request_id")
@@ -26,7 +25,7 @@ public class Feedback {
     @Column(name = "created_at")
     private LocalDateTime createdAt;
 
-    private int rating;
+    private Integer rating;
 
     @Column(name = "feedback_description")
     private String feedbackDescription;
